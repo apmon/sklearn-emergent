@@ -11,14 +11,6 @@ from sklearn.base import BaseEstimator, RegressorMixin
 
 # http://stackoverflow.com/questions/23866833/whats-the-full-specification-for-implementing-a-custom-scikit-learn-estimator
 
-# Full instructions are available in the scikit-learn docs, and the
-# principles behind the API are set out in this paper by yours truly
-# et al. In short, besides fit, what you need for an estimator are
-# get_params and set_params that return (as a dict) and set (from
-# kwargs) the hyperparameters of the estimator, i.e. the parameters of
-# the learning algorithm itself (as opposed to the data parameters it
-# learns). These parameters should match the __init__ parameters.
-
 class Transport:
     def __init__(self, address = '127.0.0.1', port = 5360, buffer_size = 1024):
         self.buf_size = buffer_size
