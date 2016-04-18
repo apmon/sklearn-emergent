@@ -47,18 +47,10 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
     # at the class level in their ``__init__`` as explicit keyword
     # arguments (no ``*args`` or ``**kwargs``).
     
-    # TODO: set the lrate
     def __init__(self, transport, lrate=.1):
 
         self.lrate = lrate
         self.transport = transport
-
-        # args, _, _, values = inspect.getargvalues(inspect.currentframe())
-        # values.pop("self")
-        # for arg, val in values.items():
-        #     setattr(self, arg, val)
-        #     print("{} = {}".format(arg,val)
-        
         self.banner = self.transport.read_json()
         print "banner", self.banner
 
