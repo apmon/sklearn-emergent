@@ -56,10 +56,10 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
     # arguments (no ``*args`` or ``**kwargs``).
     
     # TODO: set the lrate
-    def __init__(self, lrate=.1):
+    def __init__(self, transport, lrate=.1):
 
         self.lrate = lrate
-        self.transport = Transport()
+        self.transport = transport
 
         # args, _, _, values = inspect.getargvalues(inspect.currentframe())
         # values.pop("self")
@@ -75,18 +75,20 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
             self.transport.send_json({"command": "SetMember", "path": path, "member": member, "var_value": value})
         except Exception, e:
             print str(e)
+            return False
         else:
             self.transport.flush()
-        return True
+            return True
 
     def run_program(self, prog_name):
         try:
             self.transport.send_json({"command": "RunProgram", "program": prog_name})
         except Exception, e:
             print str(e)
+            return False
         else:
-            self.read_socket_json()
-        return True
+            self.transport.flush()
+            return True
     
     # All logic behind estimator parameters, like translating string
     # arguments into functions, should be done in fit
@@ -106,7 +108,7 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
         return numpy.full((len(X[:,1]), 1), 1)
 
 
-emer_sklearn = EmergentSklearnRegressor()
+emer_sklearn = EmergentSklearnRegressor(transport=Transport())
 emer_sklearn.fit(numpy.ones((5,5)), numpy.ones((5,1)))
 # result = emer_sklearn.predict(X_test)
 del emer_sklearn
