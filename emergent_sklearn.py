@@ -31,7 +31,10 @@ class Transport:
     def read_json(self):
         total_data=[]
         while True:
-            data = self.s.recv(self.buf_size)
+            try:
+                data = self.s.recv(self.buf_size)
+            except socket.timeout, se:
+                break;
             if not data: break
             total_data.append(data)
         return ''.join(total_data)
