@@ -76,25 +76,21 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
     
     def set_input_data(self, x, y):
         try:
+
+            x = x / x.max(axis=0)
+
             input_rows = []
             for row in x.tolist():
                 input_rows.append([row])
 
-            pprint(y)
-                
-            # output_rows = [[[0]*len(set(y))]]*len(input_rows)
+            pprint(input_rows)
 
             output_rows = []
-
             for row_i in range(len(input_rows)):
                 cur_val = numpy.zeros((len(set(y)),1)).tolist()
                 cur_row = [cur_val]
                 cur_row[0][y[row_i]] = 1.0
                 output_rows.append(cur_row)
-                
-                #output_rows[row_i][0][y[row_i]] = 1.0
-
-            pprint(output_rows)
                 
             json_obj = {"command": "SetData",
                         "table": "StdInputData",
