@@ -76,8 +76,31 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
     
     def set_input_data(self, x, y):
         try:
-            json_obj = {"command": "SetData", "table": "StdInputData", "create": False, "data": 
-                        {"columns": [ {"name": "Name", "type": "String", "values": ["HEllo World"]},  {"name": "Input", "matrix": True, "type": "float", "values": [[]]}, {"name": "Output", "matrix": True, "type": "float", "values": [[]]} ] } }
+            input_rows = []
+            for row in x.tolist():
+                input_rows.append([row])
+
+            output_rows = []
+            for row in y.tolist():
+                output_rows.append([row])
+
+                
+            json_obj = {"command": "SetData",
+                        "table": "StdInputData",
+                        "create": False,
+                        "data":
+                        {"columns":
+                         [{"name":"Name",
+                           "type": "String",
+                           "values": ["HEllo World"]},
+                          {"name": "Input",
+                           "matrix": True,
+                           "type": "float",
+                           "values": input_rows},
+                          {"name": "Output",
+                           "matrix": True,
+                           "type": "float",
+                           "values": output_rows}]}}
             self.transport.send_json(json_obj)
         except Exception, e:
             print str(e)
@@ -121,3 +144,5 @@ emer_sklearn.fit(numpy.ones((5,5)), numpy.ones((5,1)))
 del emer_sklearn
 
 # check_estimator(EmergentSklearnRegressor)
+
+
