@@ -80,10 +80,21 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
             for row in x.tolist():
                 input_rows.append([row])
 
-            output_rows = []
-            for row in y.tolist():
-                output_rows.append([row])
+            pprint(y)
+                
+            # output_rows = [[[0]*len(set(y))]]*len(input_rows)
 
+            output_rows = []
+
+            for row_i in range(len(input_rows)):
+                cur_val = numpy.zeros((len(set(y)),1)).tolist()
+                cur_row = [cur_val]
+                cur_row[0][y[row_i]] = 1.0
+                output_rows.append(cur_row)
+                
+                #output_rows[row_i][0][y[row_i]] = 1.0
+
+            pprint(output_rows)
                 
             json_obj = {"command": "SetData",
                         "table": "StdInputData",
@@ -125,10 +136,10 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
     def fit(self, X, y):
         self.set_member(".networks.layers.Input.un_geom", "x", X.shape[1])
         self.set_member(".networks.layers.Input.un_geom", "y", 1)
-        self.set_member(".networks.layers.Output.un_geom", "x", 1)
+        self.set_member(".networks.layers.Output.un_geom", "x", len(set(y)))
         self.set_member(".networks.layers.Output.un_geom", "y", 1)
         self.run_program("SklearnConfigNet")
-        self.set_input_data(X[1,:],y[1])
+        self.set_input_data(X, y)
         
         return self
 
@@ -139,7 +150,12 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
 
 
 emer_sklearn = EmergentSklearnRegressor(transport=Transport())
-emer_sklearn.fit(numpy.ones((5,5)), numpy.ones((5,1)))
+
+input_data = sklearn.datasets.load_iris()['data']
+output_data = sklearn.datasets.load_iris()['target']
+
+
+emer_sklearn.fit(input_data, output_data)
 # result = emer_sklearn.predict(X_test)
 del emer_sklearn
 
