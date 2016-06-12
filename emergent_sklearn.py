@@ -73,6 +73,18 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
         else:
             self.transport.flush()
             return True
+    
+    def set_input_data(self, x, y):
+        try:
+            json_obj = {"command": "SetData", "table": "StdInputData", "create": False, "data": 
+                        {"columns": [ {"name": "Name", "type": "String", "values": ["HEllo World"]},  {"name": "Input", "matrix": True, "type": "float", "values": [[]]}, {"name": "Output", "matrix": True, "type": "float", "values": [[]]} ] } }
+            self.transport.send_json(json_obj)
+        except Exception, e:
+            print str(e)
+            return False
+        else:
+            self.transport.flush()
+            return True
 
     def run_program(self, prog_name):
         try:
@@ -93,6 +105,7 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
         self.set_member(".networks.layers.Output.un_geom", "x", 1)
         self.set_member(".networks.layers.Output.un_geom", "y", 1)
         self.run_program("SklearnConfigNet")
+        self.set_input_data(X[1,:],y[1])
         
         return self
 
