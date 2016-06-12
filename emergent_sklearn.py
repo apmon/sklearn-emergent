@@ -25,7 +25,12 @@ class Transport:
 
     def flush(self):
         while True:
-            data = self.s.recv(self.buf_size)
+            try:
+                data = self.s.recv(self.buf_size)
+                print "Receiving from server: " + str(data);
+            except socket.timeout, se:
+                break
+                
             if not data: break
 
     def read_json(self):
@@ -34,13 +39,15 @@ class Transport:
             try:
                 data = self.s.recv(self.buf_size)
             except socket.timeout, se:
-                break;
+                break
             if not data: break
             total_data.append(data)
+        print "Receiving from server: " + str(total_data);
         return ''.join(total_data)
 
     def send_json(self, obj):
         self.s.send(json.dumps(obj)+'\n')
+        print "Sending to server: " + json.dumps(obj) + '\n'
 
 
 
