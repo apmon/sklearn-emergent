@@ -1,6 +1,6 @@
 from pprint import pprint
 import inspect
-import socket; socket.setdefaulttimeout(.1) # TODO: may want to tune this
+import socket; socket.setdefaulttimeout(.2) # TODO: may want to tune this
 import json
 import numpy
 from time import sleep
@@ -33,7 +33,7 @@ class Transport:
                 
             if not data: break
 
-    def read_json(self):
+    def read_string(self):
         total_data=[]
         while True:
             try:
@@ -44,6 +44,16 @@ class Transport:
             total_data.append(data)
         print "Receiving from server: " + str(total_data);
         return ''.join(total_data)
+
+    def read_json(self):
+        try:
+            result = json.loads(self.read_string())
+        except:
+            print "Could not parse json"
+            result = {}
+        return result
+        
+        
 
     def send_json(self, obj):
         self.s.send(json.dumps(obj)+'\n')
@@ -61,7 +71,7 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
 
         self.lrate = lrate
         self.transport = transport
-        self.banner = self.transport.read_json()
+        self.banner = self.transport.read_string()
         print "banner", self.banner
 
     def set_member(self, path, member, value):
@@ -118,7 +128,21 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
 
     def run_program(self, prog_name):
         try:
-            self.transport.send_json({"command": "RunProgram", "program": prog_name})
+            self.transport.send_json({"command": "RunProgramAsync", "program": prog_name})
+            sleep(0.5)
+            result = self.transport.read_json()
+            if (result["status"] <> "OK"):
+                print (result["error"])
+                return False
+            self.transport.send_json({"command": "GetRunState"})
+            result = self.transport.read_json()
+            while (result["result"] == "2"):
+               sleep(.5) 
+               self.transport.send_json({"command": "GetRunState"})
+               result = self.transport.read_json()
+               pprint(result)
+            
+            
         except Exception, e:
             print str(e)
             return False
@@ -134,8 +158,11 @@ class EmergentSklearnRegressor(BaseEstimator, RegressorMixin):
         self.set_member(".networks.layers.Input.un_geom", "y", 1)
         self.set_member(".networks.layers.Output.un_geom", "x", len(set(y)))
         self.set_member(".networks.layers.Output.un_geom", "y", 1)
-        self.run_program("SklearnConfigNet")
+        if (not self.run_program("SklearnConfigNet")):
+            return
+        
         self.set_input_data(X, y)
+        self.run_program("MasterTrain")
         
         return self
 

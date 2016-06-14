@@ -3898,7 +3898,7 @@ LeabraProject .projects["SKlearnLeabra"] {
    web_doc=1;
    wiki="emergent";
    url="LeabraFlexProgs";
-   full_url="https://grey.colorado.edu/emergent/index.php/LeabraFlexProgs";
+   full_url="http://grey.colorado.edu/emergent/index.php/LeabraFlexProgs";
    text_size=1;
    text="<html>
 <head></head>
@@ -3983,11 +3983,11 @@ mw.config.set({\"wgCanonicalNamespace\":\"\",\"wgCanonicalSpecialPageName\":!1,\
 
 <!-- 
 NewPP limit report
-Cached time: 20160611204853
+Cached time: 20160613235356
 Cache expiry: 86400
 Dynamic content: false
-CPU time usage: 0.016 seconds
-Real time usage: 0.020 seconds
+CPU time usage: 0.026 seconds
+Real time usage: 0.029 seconds
 Preprocessor visited node count: 15/1000000
 Preprocessor generated node count: 20/1000000
 Post?expand include size: 0/2097152 bytes
@@ -4001,7 +4001,7 @@ Transclusion expansion time report (%,ms,calls,template)
 100.00%    0.000      1 - -total
 -->
 
-<!-- Saved in parser cache with key pdpwiki:pcache:idhash:2315-0!*!0!!en!*!* and timestamp 20160611204853 and revision id 11194
+<!-- Saved in parser cache with key pdpwiki:pcache:idhash:2315-0!*!0!!en!*!* and timestamp 20160613235355 and revision id 11194
  -->
 </div>					<div class=\"printfooter\">
 						Retrieved from \"<a dir=\"ltr\" href=\"https://grey.colorado.edu/emergent/index.php?title=LeabraFlex&amp;oldid=11194\">https://grey.colorado.edu/emergent/index.php?title=LeabraFlex&amp;oldid=11194</a>\"					</div>
@@ -4110,7 +4110,7 @@ You can view its source [e]\" accesskey=\"e\">View source</a></span></li>
 		<script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
 mw.loader.state({\"user\":\"ready\",\"user.groups\":\"ready\"});mw.loader.load([\"mediawiki.toc\",\"mediawiki.action.view.postEdit\",\"site\",\"mediawiki.user\",\"mediawiki.hidpi\",\"mediawiki.page.ready\",\"mediawiki.searchSuggest\",\"ext.headertabs\"]);
 } );</script><script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
-mw.config.set({\"wgBackendResponseTime\":127});
+mw.config.set({\"wgBackendResponseTime\":123});
 } );</script>
 	
 
@@ -8438,7 +8438,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8465,7 +8465,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8492,7 +8492,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8519,7 +8519,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8546,7 +8546,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8573,7 +8573,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8591,7 +8591,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
       width=98;
       ar {
        name="ar";
-      [1] 50;      };
+      [1] 500;      };
      };
      int_Data @["trials_per_epoch"] {
       UserDataItem_List @*(.user_data_) {
@@ -8600,7 +8600,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8627,7 +8627,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8654,7 +8654,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8681,7 +8681,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8708,7 +8708,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8735,7 +8735,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1791590452194214;
+	value 8 0=0.1778584;
 	val_type_fixed=0;
        };
       };
@@ -8762,7 +8762,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.2650822699069977;
+	value 8 0=0.2631579;
 	val_type_fixed=0;
        };
       };
@@ -8789,7 +8789,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        el_def=0;
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1151736751198769;
+	value 8 0=0.1143376;
 	val_type_fixed=0;
        };
       };
@@ -8821,7 +8821,7 @@ mw.config.set({\"wgBackendResponseTime\":127});
        };
        UserDataItem @["view_panel_wd"] {
 	name="view_panel_wd";
-	value 6 0=0.1517367511987686;
+	value 8 0=0.1506352;
 	val_type_fixed=0;
        };
       };
@@ -20674,7 +20674,7 @@ also save specs.";
       desc=;
       flags=CAN_REVERT_TO_CODE;
       code_string="input_data->RemoveAllRows()";
-      pre_compile_code_string=;
+      pre_compile_code_string="input_data->RemoveAllRows()";
       result_var=NULL;
       obj=.projects["SKlearnLeabra"].programs.gp["UtilProgs"]["SklearnConfigNet"].vars["input_data"]$$;
       method=DataTable::RemoveAllRows;
@@ -24021,22 +24021,22 @@ and the testing data is updated.  The first epoch monitor should have all the it
     el_def=0;
     UserDataItem @["view_win_lft"] {
      name="view_win_lft";
-     value 8 0=0.0109375;
+     value 8 0=0;
      val_type_fixed=0;
     };
     UserDataItem @["view_win_top"] {
      name="view_win_top";
-     value 8 0=0.06117647;
+     value 8 0=0;
      val_type_fixed=0;
     };
     UserDataItem @["view_win_wd"] {
      name="view_win_wd";
-     value 8 0=0.9976562;
+     value 8 0=1;
      val_type_fixed=0;
     };
     UserDataItem @["view_win_ht"] {
      name="view_win_ht";
-     value 8 0=0.8305882;
+     value 8 0=0.7993159;
      val_type_fixed=0;
     };
     UserDataItem @["view_win_iconified"] {
@@ -24046,7 +24046,7 @@ and the testing data is updated.  The first epoch monitor should have all the it
     };
     UserDataItem @["view_splitter_state"] {
      name="view_splitter_state";
-     value 9 0="AAAA/wAAAAEAAAADAAABJQAAAvEAAALdAQAAAAcBAAAAAQE=";
+     value 9 0="AAAA/wAAAAEAAAADAAAA6wAAAisAAAIpAQAAAAcBAAAAAQE=";
      val_type_fixed=0;
     };
    };
@@ -24054,7 +24054,7 @@ and the testing data is updated.  The first epoch monitor should have all the it
    m_data=.projects["SKlearnLeabra"]$$;
    cur_font_size=12;
    visible=1;
-   win_name=".projects[\"SKlearnLeabra\"] - SKlearnLeabra.proj [*]";
+   win_name=".projects[\"SKlearnLeabra\"] - SKlearnLeabra.proj";
    m_is_root=0;
    m_is_viewer_xor_browser=0;
    m_is_proj_viewer=1;
@@ -24079,7 +24079,7 @@ and the testing data is updated.  The first epoch monitor should have all the it
      cur_font_size=12;
      visible=0;
      lft=0;
-     top=0.02588235;
+     top=0;
      o=Horizontal;
     };
    };
@@ -25653,22 +25653,22 @@ taTransform @*(.m_transform) {scale={x=1: y=1: z=1: }: rotate={x=0: y=0: z=1: ro
       el_def=0;
       UserDataItem @["view_win_lft"] {
        name="view_win_lft";
-       value 8 0=0;
+       value 8 0=-0.002785515;
        val_type_fixed=0;
       };
       UserDataItem @["view_win_top"] {
        name="view_win_top";
-       value 8 0=0.08941177;
+       value 8 0=0.03078677;
        val_type_fixed=0;
       };
       UserDataItem @["view_win_wd"] {
        name="view_win_wd";
-       value 8 0=0.06875;
+       value 8 0=0.05710306;
        val_type_fixed=0;
       };
       UserDataItem @["view_win_ht"] {
        name="view_win_ht";
-       value 8 0=0.6776471;
+       value 8 0=0.6944128;
        val_type_fixed=0;
       };
       UserDataItem @["view_win_iconified"] {
@@ -25711,7 +25711,7 @@ taTransform @*(.m_transform) {scale={x=1: y=1: z=1: }: rotate={x=0: y=0: z=1: ro
 * added load_0_epc in lesson -- reinit network.epoch after loading weights -- we load pretrained eye weights, but want to start counter over..
 
 ";
- tree_state{ .projects[0];.projects[0].docs;.projects[0].wizards;.projects[0].ctrl_panels;.projects[0].data;.projects[0].data.gp[0];.projects[0].programs;.projects[0].programs.gp[0];.projects[0].programs.gp[1];.projects[0].programs.gp[2];.projects[0].programs.gp[3];.projects[0].programs.gp[4];.projects[0].programs.gp[4][17];.projects[0].programs.gp[4][17].objs;.projects[0].programs.gp[4][17].types;.projects[0].programs.gp[4][17].args;.projects[0].programs.gp[4][17].vars;.projects[0].programs.gp[4][17].functions;.projects[0].programs.gp[4][17].init_code;.projects[0].programs.gp[4][17].prog_code;.projects[0].programs.gp[4][17].prog_code[0];.projects[0].networks;.projects[0].networks[0];.projects[0].networks[0].specs; };
+ tree_state{ .projects[0];.projects[0].docs;.projects[0].wizards;.projects[0].ctrl_panels;.projects[0].data;.projects[0].data.gp[0];.projects[0].data.gp[3];.projects[0].programs;.projects[0].programs.gp[0];.projects[0].programs.gp[1];.projects[0].programs.gp[2];.projects[0].programs.gp[3];.projects[0].programs.gp[4];.projects[0].programs.gp[4][17];.projects[0].programs.gp[4][17].objs;.projects[0].programs.gp[4][17].types;.projects[0].programs.gp[4][17].args;.projects[0].programs.gp[4][17].vars;.projects[0].programs.gp[4][17].functions;.projects[0].programs.gp[4][17].init_code;.projects[0].programs.gp[4][17].prog_code;.projects[0].programs.gp[4][17].prog_code[0];.projects[0].networks;.projects[0].networks[0];.projects[0].networks[0].specs;.projects[0].networks[0].specs[0];.projects[0].networks[0].specs[1];.projects[0].networks[0].specs[2];.projects[0].networks[0].specs[2].lrate_sched;.projects[0].networks[0].layers;.projects[0].networks[0].layers[0]; };
  networks {
   name="networks";
   el_typ=LeabraNetwork;
@@ -26213,37 +26213,37 @@ taTransform @*(.m_transform) {scale={x=1: y=1: z=1: }: rotate={x=0: y=0: z=1: ro
        step=-0.01;
       };
       SchedItem @[1] {
-       start_ctr=50;
+       start_ctr=100;
        start_val=0.5;
        duration=50;
        step=-0.006;
       };
       SchedItem @[2] {
-       start_ctr=100;
+       start_ctr=200;
        start_val=0.2;
        duration=50;
        step=-0.002;
       };
       SchedItem @[3] {
-       start_ctr=150;
+       start_ctr=300;
        start_val=0.1;
        duration=50;
        step=-0.001;
       };
       SchedItem @[4] {
-       start_ctr=200;
+       start_ctr=400;
        start_val=0.05;
        duration=50;
        step=-0.0006;
       };
       SchedItem @[5] {
-       start_ctr=250;
+       start_ctr=500;
        start_val=0.02;
        duration=50;
        step=-0.0002;
       };
       SchedItem @[6] {
-       start_ctr=300;
+       start_ctr=600;
        start_val=0.01;
        duration=1;
        step=1;
